@@ -10,7 +10,7 @@ import java.util.Optional;
 public class UserDAO implements IUserDAO{
     private static final String url = "jdbc:mysql://localhost:3306/UserInfo";
     private static final String username = "root";
-    private static final String password = "07122004";
+    private static final String password   = "07122004";
 
     @Override
     public Optional<User> getUserByUsername(String username){

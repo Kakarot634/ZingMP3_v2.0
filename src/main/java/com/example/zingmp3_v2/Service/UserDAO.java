@@ -15,7 +15,7 @@ public class UserDAO implements IUserDAO{
     @Override
     public Optional<User> getUserByUsername(String username){
         try(Connection connection =DriverManager.getConnection(url, username, password)){
-            String sql = "SELECT username, password FROM users WHERE username = ?";
+            String sql = "SELECT username, password FROM UserFormation WHERE username = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, username);
             ResultSet resultSet = statement.executeQuery();

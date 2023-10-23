@@ -16,7 +16,7 @@
     <h1> ZingMP3 Music</h1>
     <form action="UserLogin" method="post">
         <div class="form-group">
-            <label for="email">Email:</label>
+            <label for="email">Username:</label>
             <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">

@@ -17,10 +17,11 @@ public class Login extends HttpServlet {
     private UserDAO userDAO;
 
     public void init() throws ServletException{
-        UserDAO userDAO =   new UserDAO();
+        UserDAO userDAO = new UserDAO() {
+        };
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         Optional<User> optionalUser = userDAO.getUserByUsername(username);

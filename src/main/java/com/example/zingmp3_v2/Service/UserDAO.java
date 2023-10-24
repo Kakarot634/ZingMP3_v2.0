@@ -3,12 +3,10 @@ package com.example.zingmp3_v2.Service;
 import com.example.zingmp3_v2.Model.User;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 public class UserDAO implements IUserDAO{
-    private static final String url = "jdbc:mysql://localhost:3306/UserInfo";
+    private static final String url = "jdbc:mysql://localhost:3306/UserInfomation";
     private static final String username = "root";
     private static final String password   = "07122004";
 
@@ -17,7 +15,7 @@ public class UserDAO implements IUserDAO{
         try(Connection connection =DriverManager.getConnection(url, username, password)){
             String sql = "SELECT username, password FROM UserFormation WHERE username = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, username);
+            statement.setString(1, UserDAO.username);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 String fetchedUsername = resultSet.getString("username");

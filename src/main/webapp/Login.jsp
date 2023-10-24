@@ -8,13 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP Page</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="login-container">
-    <h1> ZingMP3 Music</h1>
-    <form action="UserLogin" method="post">
+    <h1>ZingMP3 Music</h1>
+    <form action="/login" method="post">
         <div class="form-group">
             <label for="email">Username:</label>
             <input type="email" id="email" name="email" required>
